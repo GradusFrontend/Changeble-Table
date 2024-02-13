@@ -36,7 +36,7 @@
             </thead>
 
             <tbody>
-                <tr>
+                <!-- <tr>
                     <td>1</td>
                     <td>baber</td>
                     <td>1942</td>
@@ -53,10 +53,29 @@
                         <button><img src="./img/edit_icon.svg" alt="edit"></button>
                         <button><img src="./img/trash-bin.svg" alt="delete"></button>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
+
+    <dialog class="fade">
+        <div class="modal-wrap">
+            <img class="cross" src="./img/cross.svg" alt="">
+            <h1>Do you want change something?</h1>
+
+            <form name="modalForm">
+                <label for="nameModal"> <h3>Name</h3>
+                    <input type="text" name="name" id="nameModal" placeholder="Bruce Reyes">
+                </label>
+    
+                <label for="ageModal"> <h3>Age</h3>
+                    <input type="number" name="age" id="ageModal" placeholder="22">
+                </label>
+    
+                <button id="submitModal">Change</button>
+            </form>
+        </div>
+    </dialog>
 
 
 

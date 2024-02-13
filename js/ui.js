@@ -1,4 +1,8 @@
+const tbody = document.querySelector('tbody')
+const modal = document.querySelector('dialog')
+const close = document.querySelector('.cross')
 
+export let id
 export function reloadTable(arr, place) {
     place.innerHTML = ''
 
@@ -26,5 +30,19 @@ export function reloadTable(arr, place) {
         num.innerHTML = arr.indexOf(item) + 1
         name.innerHTML = item.name
         age.innerHTML = item.age
+
+        deleteBtn.onclick = () => {
+            arr.splice(arr.indexOf(item), 1)
+            reloadTable(arr, tbody)
+        }
+
+        edit.onclick = () => {
+            modal.showModal()
+            id = item.id
+        }
     }
+}
+
+close.onclick = () => {
+    modal.close()
 }
