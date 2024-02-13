@@ -48,7 +48,7 @@ modalForm.onsubmit = (e) => {
   
     let finded = peoples.find(el => el.id === id)
     finded.name = name
-    finded.age = age
+    finded.age = new Date().getFullYear() - age
     
     reloadTable(peoples, tbody)
     modal.close()
